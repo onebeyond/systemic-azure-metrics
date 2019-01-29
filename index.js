@@ -13,7 +13,7 @@ module.exports = () => {
   const start = async ({ config }) => {
     const { key, internalLogging, samplingPercentage, autoCollect: { requests, performance, exceptions, dependencies, console }, context: { tags } } = config;
     if (!key) throw new Error('No insights key has been provided!');
-    const { defaultClient } = appInsights
+    appInsights
       .setup(key)
       .setInternalLogging(!!internalLogging)
       .setAutoCollectRequests(!!requests)
@@ -23,10 +23,12 @@ module.exports = () => {
       .setAutoCollectConsole(!!console, !!console)
       .start();
 
+    const { defaultClient } = appInsights;
+
     if (samplingPercentage) setupSampling(defaultClient)(samplingPercentage);
     tags.forEach(setupTag(defaultClient));
     return defaultClient;
-};
+  };
 
-	return { start };
+  return { start };
 };
