@@ -1,6 +1,6 @@
 {
   "name": "systemic-azure-metrics",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A systemic plugin to use the azure metrics sdk.",
   "main": "index.js",
   "repository": {
@@ -14,6 +14,7 @@
   },
   "homepage": "https://github.com/guidesmiths/systemic-azure-metrics#readme",
   "dependencies": {
-    "applicationinsights": "^1.0.8"
+    "applicationinsights": "^1.0.8",
+    "debug": "^4.1.1"
   }
 }

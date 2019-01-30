@@ -1,13 +1,16 @@
+const debug = require('debug')('systemic-azure-metrics');
 const appInsights = require('applicationinsights');
 
 module.exports = () => {
 
   // samplingPercentage, disableAppInsights, etc
   const setupConfig = (client) => (property, value) => {
+    debug(`Setting up config: ${property} = ${value}`);
     client.config.property = value;
   };
 
   const setupTag = (client) => (property, value) => {
+    debug(`Setting up context tag: ${property} = ${value}`);
     client.context.tags[property] = value;
   };
 
