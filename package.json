@@ -1,6 +1,6 @@
 {
   "name": "systemic-azure-metrics",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A systemic plugin to use the azure metrics sdk.",
   "main": "index.js",
   "repository": {
