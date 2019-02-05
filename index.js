@@ -17,7 +17,7 @@ module.exports = () => {
   const start = async ({ config }) => {
     const {
       key,
-      internalLogging = true,
+      internalLogging = false,
       insightsConfig = {},
       context: {
         tags = {},
