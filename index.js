@@ -25,6 +25,7 @@ module.exports = () => {
       autoCollect: {
         requests = true,
         performance = true,
+        extendedPerformance = true,
         exceptions = true,
         dependencies = true,
         console = true
@@ -35,7 +36,7 @@ module.exports = () => {
       .setup(key)
       .setInternalLogging(internalLogging)
       .setAutoCollectRequests(requests)
-      .setAutoCollectPerformance(performance)
+      .setAutoCollectPerformance(performance, extendedPerformance)
       .setAutoCollectExceptions(exceptions)
       .setAutoCollectDependencies(dependencies)
       .setAutoCollectConsole(console, console)
