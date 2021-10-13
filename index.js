@@ -2,7 +2,6 @@ const debug = require('debug')('systemic-azure-metrics');
 const appInsights = require('applicationinsights');
 
 module.exports = () => {
-
   // samplingPercentage, disableAppInsights, etc
   const setupConfig = (client) => (property, value) => {
     debug(`Setting up config: ${property} = ${value}`);
@@ -20,7 +19,7 @@ module.exports = () => {
       internalLogging = false,
       insightsConfig = {},
       context: {
-        tags = {},
+        tags = {}
       },
       autoCollect: {
         requests = true,
@@ -29,7 +28,7 @@ module.exports = () => {
         exceptions = true,
         dependencies = true,
         console = true
-      },
+      }
     } = config;
     if (!key) throw new Error('No insights key has been provided!');
     appInsights
