@@ -1,5 +1,5 @@
-const debug = require("debug")("systemic-azure-metrics");
-const appInsights = require("applicationinsights");
+const debug = require('debug')('systemic-azure-metrics');
+const appInsights = require('applicationinsights');
 
 module.exports = () => {
   // samplingPercentage, disableAppInsights, etc
@@ -30,7 +30,7 @@ module.exports = () => {
         console = true
       }
     } = config;
-    if (!key) throw new Error("No insights key has been provided!");
+    if (!key) throw new Error('No insights key has been provided!');
     appInsights
       .setup(key)
       .setInternalLogging(internalLogging)
