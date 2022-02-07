@@ -41,7 +41,9 @@ module.exports = () => {
       if (baseType === 'RequestData') {
         const [, uri] = baseData.name.split(/[ ,]+/);
         const shouldIgnore = ignoreURI.some(ignored => ignored === uri);
-        debug(`Ignoring URI ${uri}`);
+        if (shouldIgnore) {
+          debug(`Ignoring URI ${uri}`);
+        }
         return !shouldIgnore;
       }
     };
