@@ -19,7 +19,7 @@ module.exports = () => {
       internalLogging = false,
       liveMetrics = false,
       traceW3C = false,
-      ignoreURI = ['/__/manifest'],
+      ignoreURI = [],
       insightsConfig = {},
       context: {
         tags = {}
