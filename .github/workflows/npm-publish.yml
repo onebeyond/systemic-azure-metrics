@@ -1,31 +1,20 @@
-name: NPM Publish
+name: Package Publishing to Github registry
 
 on:
   release:
     types: [created]
 
 jobs:
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - uses: actions/setup-node@v2
-  #     with:
-  #       node-version: '14.x'
-  #   - run: npm ci
-  #   - run: npm run lint
-  #   - run: npm test
-
   publish-npm:
-    # needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       with:
         node-version: '14.x'
-        registry-url: https://registry.npmjs.org/
+        registry-url: https://npm.pkg.github.com/
+        scope: "@infinitaslearning"
     - run: npm ci
-    - run: npm publish --ignore-scripts --access public
+    - run: npm publish --ignore-scripts
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_GUIDESMITHS }}
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

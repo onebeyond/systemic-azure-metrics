@@ -1,23 +1,26 @@
 {
-  "name": "systemic-azure-metrics",
-  "version": "0.3.0",
-  "description": "A systemic plugin to use the azure metrics sdk.",
+  "name": "@infinitaslearning/systemic-azure-metrics",
+  "version": "1.0.0",
+  "description": "A systemic plugin to use the azure metrics sdk, forked from guidesmiths version.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guidesmiths/systemic-azure-metrics.git"
+    "url": "git+https://github.com/infinitaslearning/systemic-azure-metrics.git"
   },
-  "author": "Felipe Polo Ruiz <felipe.polo@gmail.com> (https://github.com/feliun)",
+  "author": "Fernando A. Maule <fer@maule.pro> (https://github.com/fmaule)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/guidesmiths/systemic-azure-metrics/issues"
+    "url": "https://github.com/infinitaslearning/systemic-azure-metrics/issues"
   },
-  "homepage": "https://github.com/guidesmiths/systemic-azure-metrics#readme",
+  "homepage": "https://github.com/infinitaslearning/systemic-azure-metrics#readme",
   "dependencies": {
     "applicationinsights": "^2.1.3",
-    "applicationinsights-native-metrics": "0.0.6",
+    "applicationinsights-native-metrics": "0.0.7",
     "debug": "^4.3.2"
   },
+  "contributors": [
+    "Felipe Polo Ruiz <felipe.polo@gmail.com> (https://github.com/feliun)"
+  ],
   "devDependencies": {
     "eslint": "^8.0.0",
     "eslint-config-standard": "^16.0.3",
