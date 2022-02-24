@@ -35,6 +35,8 @@ module.exports = () => {
     } = config;
     if (!key) throw new Error('No insights key has been provided!');
 
+    const { disableAppInsights } = insightsConfig;
+
     const requestURIFilter = (envelope) => {
       const { data: { baseType, baseData } } = envelope;
 
@@ -60,7 +62,8 @@ module.exports = () => {
       .setAutoCollectExceptions(exceptions)
       .setAutoCollectDependencies(dependencies)
       .setAutoCollectConsole(console, console)
-      .setSendLiveMetrics(liveMetrics)
+      // Apparently live metrics are not being disabled when disabling app insights altogether
+      .setSendLiveMetrics(disableAppInsights ? false : liveMetrics)
       .setDistributedTracingMode(distributedTracingMode)
       .start();
 
