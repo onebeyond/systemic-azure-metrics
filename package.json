@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/infinitaslearning/systemic-azure-metrics#readme",
   "dependencies": {
-    "applicationinsights": "^2.1.3",
+    "applicationinsights": "^2.2.1",
     "applicationinsights-native-metrics": "0.0.7",
     "debug": "^4.3.2"
   },
