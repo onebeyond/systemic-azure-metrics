@@ -8,7 +8,7 @@
     "url": "git+https://github.com/guidesmiths/systemic-azure-metrics.git"
   },
   "author": "Felipe Polo Ruiz <felipe.polo@gmail.com> (https://github.com/feliun)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/guidesmiths/systemic-azure-metrics/issues"
   },
